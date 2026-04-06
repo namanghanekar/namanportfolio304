@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <title>Naman Ghanekar | Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<header class="nav">
+
+    <div class="logo">Naman</div>
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- NAV MENU -->
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle">
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
+    </button>
+
+</header>
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-layout">
+
+        <!-- LEFT -->
+        <div class="hero-left">
+            <h1>
+                Hi, I’m <span>Naman Ghanekar</span><br>
+                Java & Spring Boot Backend Developer
+            </h1>
+
+            <p class="typing-line"><span id="typing"></span></p>
+
+            <p class="hero-desc">
+                Computer Science Engineering student focused on backend development,
+                REST APIs, and scalable web applications.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="/resume/Namanresume2025.pdf" class="btn-outline" download>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-right">
+            <div class="hero-graphic">
+
+                <div class="flow-line"></div>
+
+                <div class="core-circle">
+                    <span>N</span>
+                </div>
+
+                <div class="pill pill-top">
+                    <span class="dot yellow"></span> JAVA_BACKEND
+                </div>
+
+                <div class="pill pill-bottom">
+                    <span class="dot purple"></span> SYSTEM_LOGIC
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal-item">
+    <h2>Technical Skills</h2>
+    <div class="cards">
+        <div class="card">Java</div>
+        <div class="card">Spring Boot</div>
+        <div class="card">REST APIs</div>
+        <div class="card">swagger, postman</div>
+        <div class="card">MySQL & DBMS</div>
+        <div class="card">HTML, CSS, JavaScript</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Docker (Learning)</div>
+    </div>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience" class="about-section">
+
+    <h2 class="about-title">Work Experience</h2>
+
+    <div class="about-content">
+
+        <p class="about-main">
+            I worked as a <span class="highlight">Java Backend Developer Intern</span> at 
+            <span class="highlight-blue">Kodvix Technologies</span>, where I gained hands-on experience 
+            in building backend systems using Spring Boot.
+        </p>
+
+        <div class="about-box">
+            I developed REST APIs using Spring Boot, handled database operations using MySQL, 
+            and implemented authentication systems. I also worked on real-world backend projects 
+            and improved my understanding of scalable application architecture.
+        </div>
+
+        <p class="about-footer">
+            Completed a <span class="italic">3-month internship</span> where I enhanced my practical 
+            knowledge of backend development, system logic, and deployment workflows.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal-item">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card"
+             onclick="openModal(
+       'Fitness Point',
+       'Personalized fitness platform providing BMI-based workouts, diet plans, authentication and premium features.',
+       './images/fitnesspoint-hero.png',
+       'https://fitnesspoint.onrender.com/Fitnesspoint/',
+       'https://github.com/namanghanekar/fitnesspro'
+     )">
+
+            <div class="project-image">
+                <img src="./images/fitnesspoint-hero.png" alt="Fitness Point">
+            </div>
+
+            <h3>Fitness Point</h3>
+
+            <p>
+                Personalized fitness platform providing BMI-based workouts,
+                diet plans, authentication and premium features.
+            </p>
+
+            <div class="project-links">
+                <span class="details-text">Click for details</span>
+
+                <div class="front-links">
+                    <a href="https://fitnesspoint.onrender.com/Fitnesspoint/"
+                       target="_blank"
+                       onclick="event.stopPropagation()">Live</a>
+
+                    <a href="https://github.com/namanghanekar/fitnesspro"
+                       target="_blank"
+                       onclick="event.stopPropagation()">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PROJECT 2 -->
+        <div class="project-card"
+             onclick="openModal(
+       'Sky Way',
+       'Flight booking system with authentication, flight search and booking management.',
+       './images/img.png',
+       '',
+       'https://github.com/namanghanekar/skyway'
+     )">
+
+            <div class="project-image">
+                <img src="./images/img.png" alt="Sky Way">
+            </div>
+
+            <h3>Sky Way</h3>
+
+            <p>
+                Flight booking system with user authentication,
+                flight search and booking management.
+            </p>
+
+            <div class="project-links">
+                <span class="details-text">Click for details</span>
+
+                <div class="front-links">
+                    <a href="https://github.com/namanghanekar/skyway"
+                       target="_blank"
+                       onclick="event.stopPropagation()">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PROJECT 3 -->
+        <div class="project-card"
+             onclick="openModal(
+       'Crypto Trading Platform',
+       'Demo crypto trading platform with virtual balance, buy/sell simulation and dashboard UI.',
+       './images/img_1.png',
+       '',
+       'https://github.com/namanghanekar'
+     )">
+
+            <div class="project-image">
+                <img src="./images/img_1.png" alt="Crypto Trading Platform">
+            </div>
+
+            <h3>Crypto Trading Platform</h3>
+
+            <p>
+                Demo crypto trading platform with virtual balance,
+                buy/sell simulation and dashboard UI.
+            </p>
+
+            <div class="project-links">
+                <span class="details-text">Click for details</span>
+
+                <div class="front-links">
+                    <a href="https://github.com/namanghanekar"
+                       target="_blank"
+                       onclick="event.stopPropagation()">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about-section reveal-about">
+    <h2 class="about-title about-item">About Me</h2>
+
+    <div class="about-content">
+        <p class="about-item">
+            I’m <span class="highlight">Naman Ghanekar</span>,
+            a Computer Science Engineering student and a passionate
+            <span class="highlight-blue">Java & Spring Boot Backend Developer</span>.
+            I enjoy building scalable backend systems and clean web applications
+            that solve real-world problems.
+        </p>
+
+        <p class="about-quote about-item">
+            I specialize in backend development using Java, Spring Boot,
+            REST APIs, Servlets, and MySQL, with hands-on experience
+            in full-stack project development.
+            also have a strong foundation in testing tools like swagger and postman, and version control with Git and GitHub.
+        </p>
+
+        <p class="about-item">
+            Currently exploring system design fundamentals and modern
+            deployment workflows using Render and Docker,
+            with a strong focus on <span class="highlight-italic">product ownership</span>.
+        </p>
+    </div>
+</section>
+<!-- EDUCATION -->
+<section id="education" class="section reveal-item">
+    <h2>Education</h2>
+
+    <div class="education-list">
+
+        <!-- COLLEGE -->
+        <div class="edu-box">
+            <div class="edu-logo">
+                <img src="./images/img_2.png" alt="College Logo">
+            </div>
+
+            <div class="edu-content">
+                <span class="edu-year">2022 – 2026</span>
+                <h3>B.Tech – Computer Science Engineering</h3>
+                <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore</p>
+                <span class="edu-score">CGPA: 6.53 / 10</span>
+            </div>
+        </div>
+
+        <!-- 12TH -->
+        <div class="edu-box">
+            <div class="edu-logo">
+                <img src="./images/img_3.png" alt="12th School Logo">
+            </div>
+
+            <div class="edu-content">
+                <span class="edu-year">2021 – 2022</span>
+                <h3>Higher Secondary (12th)</h3>
+                <p> Bharat Bharti Hig.Sec.School, Betul  </p>
+                <span class="edu-score">Percentage: 70%</span>
+            </div>
+        </div>
+
+        <!-- 10TH -->
+        <div class="edu-box">
+            <div class="edu-logo">
+                <img src="./images/img_3.png" alt="10th School Logo">
+            </div>
+
+            <div class="edu-content">
+                <span class="edu-year">2019 – 2020</span>
+                <h3>Secondary (10th)</h3>
+                <p>Bharat Bharti Hig.Sec.School, Betul</p>
+                <span class="edu-score">Percentage: 78%</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section reveal-item">
+    <h2>Certifications</h2>
+
+    <div class="cert-grid">
+
+        <div class="cert-card"
+             onclick="openCertModal('./resume/cer3.jpeg')">
+            <h3> Internship / Training </h3>
+            <p class="cert-org">Universal Informatics</p>
+            <p class="cert-desc">
+                3 months professional training in C,C++,DSA,java.
+            </p>
+            <span class="cert-time">2025</span>
+        </div>
+
+        <div class="cert-card"
+             onclick="openCertModal('./resume/cer2.jpeg')">
+            <h3> Core Java </h3>
+            <p class="cert-org">Universal Informatics</p>
+            <p class="cert-desc">
+                3 months professional training in Core Java.
+            </p>
+            <span class="cert-time">2024</span>
+        </div>
+
+        <div class="cert-card"
+             onclick="openCertModal('./resume/cer1.jpeg')">
+            <h3> Advance Java backend  </h3>
+            <p class="cert-org">Universal Informatics</p>
+            <p class="cert-desc">
+                3 months professional training in Adv. Java backend .
+            </p>
+            <span class="cert-time">2024</span>
+        </div>
+        <div class="cert-card"
+             onclick="openCertModal('./resume/cer4.jpeg')">
+            <h3> Ai Chat Bot development    </h3>
+            <p class="cert-org"> NxT Wave TM </p>
+            <p class="cert-desc">
+                Build a Own Genrative Ai Model  .
+            </p>
+            <span class="cert-time">2024</span>
+        </div>
+        <div class="cert-card"
+             onclick="openCertModal('./resume/cer5.jpeg')">
+            <h3>  Java Basic  </h3>
+            <p class="cert-org">HackerRank</p>
+            <p class="cert-desc">
+                5 * certified in basic java by HackerRank  .
+            </p>
+            <span class="cert-time">2025</span>
+        </div>
+
+        <div class="cert-card"
+             onclick="openCertModal('./resume/cer6.png')">
+            <h3>Cloud Computing </h3>
+            <p class="cert-org">NPTEL Swayam Portal </p>
+            <p class="cert-desc">
+                Certifide by silver rank in Cloud Computing.
+            </p>
+            <span class="cert-time">2025</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section reveal-item">
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT : CONTACT INFO -->
+        <div class="contact-left">
+            <h3>Contact Information</h3>
+            <p>
+                I’m open to discussing projects, ideas, or opportunities
+                where I can contribute and grow.
+            </p>
+
+            <div class="contact-item">
+                <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                    <small>EMAIL</small>
+                    <a href="mailto:namanghanekar@gmail.com" class="contact-link">
+                        namanghanekar@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon linkedin"><i class="fa-brands fa-linkedin-in"></i></span>
+                <div>
+                    <small>LINKEDIN</small>
+                    <a href="https://www.linkedin.com/in/naman-ghanekar-78b6932a2/"
+                       target="_blank" class="contact-link">
+                        naman-ghanekar
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon github"><i class="fa-brands fa-github"></i></span>
+                <div>
+                    <small>GITHUB</small>
+                    <a href="https://github.com/namanghanekar"
+                       target="_blank" class="contact-link">
+                        namanghanekar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT : MESSAGE FORM -->
+        <div class="contact-right">
+            <form class="contact-form">
+                <div class="form-row">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" placeholder="you@example.com">
+                    </div>
+                </div>
+
+                <div>
+                    <label>Message</label>
+                    <textarea placeholder="Tell me about your idea or project..."></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Message ✈
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+</section>
+<!-- PERSONAL NOTE SECTION -->
+<section class="personal-note">
+    <span class="note-label">BEYOND THE IDE</span>
+
+    <p class="note-text">
+        “Outside of software, I enjoy playing cricket and football.
+        These interests keep me grounded and creative — a balance that
+        quietly reflects in every product I build.”
+    </p>
+</section>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">×</span>
+
+        <div class="modal-image">
+            <img id="modalImg" alt="Project Preview">
+        </div>
+
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+
+        <div class="modal-links">
+            <a id="modalLive" target="_blank">Live</a>
+            <a id="modalGithub" target="_blank">GitHub</a>
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="site-footer">
+
+    <div class="footer-left">
+        <span class="status-dot"></span>
+        <span class="status-text">AVAILABLE FOR OPPORTUNITIES</span>
+        <p class="copyright">
+            © 2026 <span class="highlight-name">Naman Ghanekar</span>
+        </p>
+    </div>
+
+    <div class="footer-center">
+        <a href="https://github.com/namanghanekar" target="_blank" class="footer-icon">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naman-ghanekar-78b6932a2/"
+           target="_blank" class="footer-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:namanghanekar@gmail.com" class="footer-icon">
+            <i class="fa-regular fa-envelope"></i>
+        </a>
+    </div>
+
+    <div class="footer-right">
+        <span>BACK TO TOP</span>
+        <button id="backToTop" class="top-btn">↑</button>
+    </div>
+
+</footer>
+
+
+<!-- CERTIFICATE MODAL -->
+<div id="certModal" class="cert-modal">
+    <span class="cert-close" onclick="closeCertModal()">×</span>
+    <img id="certImg" class="cert-modal-img">
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
