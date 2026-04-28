@@ -1815,3 +1815,173 @@ body.light .nav.scrolled {
     color: var(--teal);
     border: 1px solid rgba(45, 212, 191, 0.25);
 }
+/* ===============================
+   SKILLS -> 3D TECH ICON STYLE
+   (OVERRIDE OLD CARDS)
+================================ */
+
+/* Hide old card style */
+.cards {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* New circular tech icons */
+.card {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.6),
+        inset 0 2px 4px rgba(255,255,255,0.05),
+        inset 0 -2px 6px rgba(0,0,0,0.6);
+
+    transition: all 0.35s ease;
+}
+
+/* Inner glow */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(91,127,255,0.25), transparent 70%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.8),
+        0 0 20px rgba(91,127,255,0.3);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Icon inside */
+.card .icon-wrap {
+    font-size: 34px;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+/* Remove text from inside */
+.card p {
+    display: none !important;
+}
+
+/* OPTIONAL: Tooltip on hover (show skill name) */
+.card::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -28px;
+    font-size: 11px;
+    color: #aaa;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+/* ===============================
+   3D TECH BALLS STYLE
+================================ */
+
+.cards {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Hide old cards */
+.card {
+    display: none !important;
+}
+
+/* 3D Ball */
+.tech-ball {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: radial-gradient(circle at 30% 30%, #2a2a3a, #0c0c12);
+
+    box-shadow:
+        inset -6px -6px 12px rgba(0,0,0,0.7),
+        inset 6px 6px 10px rgba(255,255,255,0.05),
+        0 15px 25px rgba(0,0,0,0.8);
+
+    transition: 0.4s ease;
+    animation: floatBall 4s ease-in-out infinite;
+}
+
+/* Floating effect */
+@keyframes floatBall {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Hover glow */
+.tech-ball:hover {
+    transform: translateY(-15px) scale(1.1);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.9),
+        0 0 20px rgba(91,127,255,0.4);
+}
+
+/* Logo inside */
+.tech-ball img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
+}
+/* Tooltip name below ball */
+.tech-ball::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -26px;
+    font-size: 15px;
+    color: #aaa;
+    opacity: 0;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.tech-ball:hover::after {
+    opacity: 1;
+}
+
+/* Better spacing for rows */
+.cards {
+    max-width: 1200px;
+    margin: auto;
+}
