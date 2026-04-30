@@ -380,15 +380,15 @@ textarea {
 .terminal-card {
     position: absolute;
     right: 0;
-    bottom: 36px;
+    bottom: -200px;
     width: min(330px, 84%);
     padding: 14px;
-    transform: rotateX(9deg) rotateY(-13deg);
+    transform: rotateX(10deg) rotateY(-20deg);
 }
 
 .metric-panel {
     position: absolute;
-    top: 26px;
+    top: -50px;
     left: 0;
     width: min(300px, 80%);
     display: grid;
@@ -1748,51 +1748,41 @@ textarea {
         bottom: 12px;
         transform: translateX(-50%) rotateX(7deg);
     }
-
     .metric-panel {
         left: 50%;
         top: 0;
         transform: translateX(-50%) rotateX(7deg);
     }
-
     .timeline-item {
         grid-template-columns: 1fr;
     }
-
     .academic-feature,
     .academic-mini {
         grid-template-columns: 1fr;
     }
-
     .academic-mini strong {
         justify-self: start;
     }
-
     .site-footer {
         text-align: center;
     }
-
     .footer-links {
         justify-content: center;
     }
 }
-
 @media (max-width: 470px) {
     .hero h1 {
         font-size: 36px;
     }
-
     .section,
     .split-section,
     .experience-section {
         padding-block: 72px;
     }
-
     .tech-ball {
         width: 74px;
         height: 74px;
     }
-
     .tech-ball img {
         width: 36px;
         height: 36px;
