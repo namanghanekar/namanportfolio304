@@ -1,591 +1,500 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <meta charset="UTF-8">
-    <title>Naman Ghanekar | Backend Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Naman Ghanekar, backend developer building APIs and services with Java, Spring Boot, Go, and Gin.">
+    <title>Naman Ghanekar | Java & Go Backend Developer</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-<header class="nav">
+<header class="nav" id="top">
+    <a class="logo" href="#home" aria-label="Naman home">Naman</a>
 
-    <div class="logo">Naman</div>
-
-    <!-- HAMBURGER -->
-    <div class="menu-toggle" id="menuToggle">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
-    </div>
+    </button>
 
-    <!-- NAV MENU -->
-    <nav id="navMenu">
+    <nav id="navMenu" aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <button id="themeToggle" class="theme-toggle">
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
         <i id="themeIcon" class="fa-solid fa-moon"></i>
     </button>
-
 </header>
-<!-- HERO -->
-<section id="home" class="hero">
 
-    <div class="hero-layout">
+<main>
+    <section id="home" class="hero">
+        <div class="hero-layout">
+            <div class="hero-copy reveal-item">
+                <p class="eyebrow"><span></span> Java + Go Backend Developer Portfolio</p>
+                <h1>Backend services in Java and Go, built for clean APIs and smooth product flow.</h1>
+                <p class="typing-line"><span id="typing"></span></p>
+                <p class="hero-desc">
+                    I am Naman Ghanekar, a Computer Science Engineering student focused on two backend stacks:
+                    Java with Spring Boot and Go with Gin. I build REST APIs, authentication flows, database logic,
+                    documentation, and deployment-ready services.
+                </p>
 
-        <!-- LEFT -->
-        <div class="hero-left">
-            <h1>
-                Hi, I’m <span>Naman Ghanekar</span><br>
-                Java & Spring Boot Backend Developer
-            </h1>
-
-            <p class="typing-line"><span id="typing"></span></p>
-
-            <p class="hero-desc">
-                Computer Science Engineering student focused on backend development,
-                REST APIs, and scalable web applications.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">View Projects</a>
-                <a href="/resume/Namanresume2026.pdf" class="btn-outline" download>
-                    Download Resume
-                </a>
-            </div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="hero-right">
-            <div class="hero-graphic">
-
-                <div class="flow-line"></div>
-
-                <div class="core-circle">
-                    <span>N</span>
+                <div class="proof-row" aria-label="Professional strengths">
+                    <span><i class="fa-solid fa-check"></i> Java + Spring Boot</span>
+                    <span><i class="fa-solid fa-check"></i> Go + Gin APIs</span>
+                    <span><i class="fa-solid fa-check"></i> Database Logic</span>
+                    <span><i class="fa-solid fa-check"></i> Swagger + Postman</span>
                 </div>
 
-                <div class="pill pill-top">
-                    <span class="dot yellow"></span> JAVA_BACKEND
+                <div class="hero-stats" aria-label="Portfolio highlights">
+                    <div><strong>2</strong><span>Backend Stacks</span></div>
+                    <div><strong>3+</strong><span>Major Projects</span></div>
+                    <div><strong>6</strong><span>Certifications</span></div>
                 </div>
 
-                <div class="pill pill-bottom">
-                    <span class="dot purple"></span> SYSTEM_LOGIC
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- SKILLS -->
-<div class="cards">
-
-    <!-- 1 JAVA -->
-    <div class="tech-ball" data-name="Java">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-    </div>
-
-    <!-- 2 GO -->
-    <div class="tech-ball" data-name="Go Lang">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg">
-    </div>
-
-    <!-- 3 C / C++ -->
-    <div class="tech-ball" data-name="C / C++">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">
-    </div>
-
-    <!-- 4 HTML -->
-    <div class="tech-ball" data-name="HTML">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-    </div>
-
-    <!-- 5 CSS -->
-    <div class="tech-ball" data-name="CSS">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-    </div>
-
-    <!-- 6 JS -->
-    <div class="tech-ball" data-name="JavaScript">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-    </div>
-
-    <!-- 7 SPRING -->
-    <div class="tech-ball" data-name="Spring Boot">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-    </div>
-
-    <!-- 8 GIN -->
-    <div class="tech-ball" data-name="Gin Framework">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg">
-    </div>
-
-    <!-- 9 POSTMAN -->
-    <div class="tech-ball" data-name="Postman">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg">
-    </div>
-
-    <!-- 10 SWAGGER -->
-    <div class="tech-ball" data-name="Swagger">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg">
-    </div>
-
-    <!-- 11 GRAPHQL -->
-    <div class="tech-ball" data-name="GraphQL">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg">
-    </div>
-
-    <!-- 12 GITHUB -->
-    <div class="tech-ball" data-name="GitHub">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-    </div>
-
-    <!-- 13 DOCKER -->
-    <div class="tech-ball" data-name="Docker">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-    </div>
-
-</div><!-- EXPERIENCE -->
-<section id="experience" class="about-section">
-
-    <h2 class="about-title">Work Experience</h2>
-
-    <div class="about-content">
-
-        <p class="about-main">
-            I worked as a <span class="highlight">Java Backend Developer Intern</span> at 
-            <span class="highlight-blue">Kodvix Technologies</span>, where I gained hands-on experience 
-            in building backend systems using Spring Boot.
-        </p>
-
-        <div class="about-box">
-            I developed REST APIs using Spring Boot, handled database operations using MySQL, 
-            and implemented authentication systems. I also worked on real-world backend projects 
-            and improved my understanding of scalable application architecture.
-        </div>
-
-        <p class="about-footer">
-            Completed a <span class="italic">3-month internship</span> where I enhanced my practical 
-            knowledge of backend development, system logic, and deployment workflows.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section reveal-item">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-
-        <!-- PROJECT 1 -->
-        <div class="project-card"
-             onclick="openModal(
-       'Fitness Point',
-       'Personalized fitness platform providing BMI-based workouts, diet plans, authentication and premium features.',
-       './images/fitnesspoint-hero.png',
-       'https://fitnesspoint.onrender.com/Fitnesspoint/',
-       'https://github.com/namanghanekar/fitnesspro'
-     )">
-
-            <div class="project-image">
-                <img src="./images/fitnesspoint-hero.png" alt="Fitness Point">
-            </div>
-
-            <h3>Fitness Point</h3>
-
-            <p>
-                Personalized fitness platform providing BMI-based workouts,
-                diet plans, authentication and premium features.
-            </p>
-
-            <div class="project-links">
-                <span class="details-text">Click for details</span>
-
-                <div class="front-links">
-                    <a href="https://fitnesspoint.onrender.com/Fitnesspoint/"
-                       target="_blank"
-                       onclick="event.stopPropagation()">Live</a>
-
-                    <a href="https://github.com/namanghanekar/fitnesspro"
-                       target="_blank"
-                       onclick="event.stopPropagation()">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PROJECT 2 -->
-        <div class="project-card"
-             onclick="openModal(
-       'Sky Way',
-       'Flight booking system with authentication, flight search and booking management.',
-       './images/img.png',
-       '',
-       'https://github.com/namanghanekar/skyway'
-     )">
-
-            <div class="project-image">
-                <img src="./images/img.png" alt="Sky Way">
-            </div>
-
-            <h3>Sky Way</h3>
-
-            <p>
-                Flight booking system with user authentication,
-                flight search and booking management.
-            </p>
-
-            <div class="project-links">
-                <span class="details-text">Click for details</span>
-
-                <div class="front-links">
-                    <a href="https://github.com/namanghanekar/skyway"
-                       target="_blank"
-                       onclick="event.stopPropagation()">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- PROJECT 3 -->
-        <div class="project-card"
-             onclick="openModal(
-       'Crypto Trading Platform',
-       'Demo crypto trading platform with virtual balance, buy/sell simulation and dashboard UI.',
-       './images/img_1.png',
-       '',
-       'https://github.com/namanghanekar'
-     )">
-
-            <div class="project-image">
-                <img src="./images/img_1.png" alt="Crypto Trading Platform">
-            </div>
-
-            <h3>Crypto Trading Platform</h3>
-
-            <p>
-                Demo crypto trading platform with virtual balance,
-                buy/sell simulation and dashboard UI.
-            </p>
-
-            <div class="project-links">
-                <span class="details-text">Click for details</span>
-
-                <div class="front-links">
-                    <a href="https://github.com/namanghanekar"
-                       target="_blank"
-                       onclick="event.stopPropagation()">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section id="about" class="about-section reveal-about">
-    <h2 class="about-title about-item">About Me</h2>
-
-    <div class="about-content">
-        <p class="about-item">
-            I’m <span class="highlight">Naman Ghanekar</span>,
-            a Computer Science Engineering student and a passionate
-            <span class="highlight-blue">Java & Spring Boot Backend Developer</span>.
-            I enjoy building scalable backend systems and clean web applications
-            that solve real-world problems.
-        </p>
-
-        <p class="about-quote about-item">
-            I specialize in backend development using Java, Spring Boot,
-            REST APIs, Servlets, and MySQL, with hands-on experience
-            in full-stack project development.
-            also have a strong foundation in testing tools like swagger and postman, and version control with Git and GitHub.
-        </p>
-
-        <p class="about-item">
-            Currently exploring system design fundamentals and modern
-            deployment workflows using Render and Docker,
-            with a strong focus on <span class="highlight-italic">product ownership</span>.
-        </p>
-    </div>
-</section>
-<!-- EDUCATION -->
-<section id="education" class="section reveal-item">
-    <h2>Education</h2>
-
-    <div class="education-list">
-
-        <!-- COLLEGE -->
-        <div class="edu-box">
-            <div class="edu-logo">
-                <img src="./images/img_2.png" alt="College Logo">
-            </div>
-
-            <div class="edu-content">
-                <span class="edu-year">2022 – 2026</span>
-                <h3>B.Tech – Computer Science Engineering</h3>
-                <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore</p>
-                <span class="edu-score">CGPA: 6.53 / 10</span>
-            </div>
-        </div>
-
-        <!-- 12TH -->
-        <div class="edu-box">
-            <div class="edu-logo">
-                <img src="./images/img_3.png" alt="12th School Logo">
-            </div>
-
-            <div class="edu-content">
-                <span class="edu-year">2021 – 2022</span>
-                <h3>Higher Secondary (12th)</h3>
-                <p> Bharat Bharti Hig.Sec.School, Betul  </p>
-                <span class="edu-score">Percentage: 70%</span>
-            </div>
-        </div>
-
-        <!-- 10TH -->
-        <div class="edu-box">
-            <div class="edu-logo">
-                <img src="./images/img_3.png" alt="10th School Logo">
-            </div>
-
-            <div class="edu-content">
-                <span class="edu-year">2019 – 2020</span>
-                <h3>Secondary (10th)</h3>
-                <p>Bharat Bharti Hig.Sec.School, Betul</p>
-                <span class="edu-score">Percentage: 78%</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="section reveal-item">
-    <h2>Certifications</h2>
-
-    <div class="cert-grid">
-
-        <div class="cert-card"
-             onclick="openCertModal('./resume/cer3.jpeg')">
-            <h3> Internship / Training </h3>
-            <p class="cert-org">Universal Informatics</p>
-            <p class="cert-desc">
-                3 months professional training in C,C++,DSA,java.
-            </p>
-            <span class="cert-time">2025</span>
-        </div>
-
-        <div class="cert-card"
-             onclick="openCertModal('./resume/cer2.jpeg')">
-            <h3> Core Java </h3>
-            <p class="cert-org">Universal Informatics</p>
-            <p class="cert-desc">
-                3 months professional training in Core Java.
-            </p>
-            <span class="cert-time">2024</span>
-        </div>
-
-        <div class="cert-card"
-             onclick="openCertModal('./resume/cer1.jpeg')">
-            <h3> Advance Java backend  </h3>
-            <p class="cert-org">Universal Informatics</p>
-            <p class="cert-desc">
-                3 months professional training in Adv. Java backend .
-            </p>
-            <span class="cert-time">2024</span>
-        </div>
-        <div class="cert-card"
-             onclick="openCertModal('./resume/cer4.jpeg')">
-            <h3> Ai Chat Bot development    </h3>
-            <p class="cert-org"> NxT Wave TM </p>
-            <p class="cert-desc">
-                Build a Own Genrative Ai Model  .
-            </p>
-            <span class="cert-time">2024</span>
-        </div>
-        <div class="cert-card"
-             onclick="openCertModal('./resume/cer5.jpeg')">
-            <h3>  Java Basic  </h3>
-            <p class="cert-org">HackerRank</p>
-            <p class="cert-desc">
-                5 * certified in basic java by HackerRank  .
-            </p>
-            <span class="cert-time">2025</span>
-        </div>
-
-        <div class="cert-card"
-             onclick="openCertModal('./resume/cer6.png')">
-            <h3>Cloud Computing </h3>
-            <p class="cert-org">NPTEL Swayam Portal </p>
-            <p class="cert-desc">
-                Certifide by silver rank in Cloud Computing.
-            </p>
-            <span class="cert-time">2025</span>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="section contact-section reveal-item">
-
-    <div class="contact-wrapper">
-
-        <!-- LEFT : CONTACT INFO -->
-        <div class="contact-left">
-            <h3>Contact Information</h3>
-            <p>
-                I’m open to discussing projects, ideas, or opportunities
-                where I can contribute and grow.
-            </p>
-
-            <div class="contact-item">
-                <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
-                <div>
-                    <small>EMAIL</small>
-                    <a href="mailto:namanghanekar@gmail.com" class="contact-link">
-                        namanghanekar@gmail.com
-                    </a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn"><i class="fa-solid fa-layer-group"></i> View Projects</a>
+                    <a href="./resume/Namanresume2026.pdf" class="btn-outline" download><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
                 </div>
             </div>
 
-            <div class="contact-item">
-                <span class="icon linkedin"><i class="fa-brands fa-linkedin-in"></i></span>
-                <div>
-                    <small>LINKEDIN</small>
-                    <a href="https://www.linkedin.com/in/naman-ghanekar-78b6932a2/"
-                       target="_blank" class="contact-link">
-                        naman-ghanekar
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <span class="icon github"><i class="fa-brands fa-github"></i></span>
-                <div>
-                    <small>GITHUB</small>
-                    <a href="https://github.com/namanghanekar"
-                       target="_blank" class="contact-link">
-                        namanghanekar
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- RIGHT : MESSAGE FORM -->
-        <div class="contact-right">
-            <form class="contact-form">
-                <div class="form-row">
-                    <div>
-                        <label>Name</label>
-                        <input type="text" placeholder="Your Name">
+            <div class="hero-stage reveal-item" aria-label="Animated backend system visual">
+                <canvas id="systemCanvas" width="720" height="720"></canvas>
+                <div class="terminal-card tilt-card">
+                    <div class="terminal-top">
+                        <span></span><span></span><span></span>
                     </div>
+                    <pre><code>Naman Ghanekar 
+                        Backend Developer
+                        POST /api/services
+status: 201_CREATED
+java: Spring Boot + MySQL
+go: Gin + REST APIs
+test: Postman + Swagger</code></pre>
+                </div>
+                <div class="metric-panel tilt-card" aria-label="Backend quality metrics">
+                    <div><span>Java</span><strong>Spring</strong></div>
+                    <div><span>Go</span><strong>Gin</strong></div>
+                    <div><span>API</span><strong>REST</strong></div>
+                </div>
+                <div class="orbit-chip chip-a">Java</div>
+                <div class="orbit-chip chip-b">Go</div>
+                <div class="orbit-chip chip-c">Gin</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marquee-section" aria-label="Core backend capabilities">
+        <div class="marquee-track">
+            <span>Java</span><span>Spring Boot</span><span>Go</span><span>Gin Framework</span><span>REST APIs</span><span>MySQL</span><span>JWT Authentication</span><span>Postman</span><span>Swagger</span><span>Docker</span>
+            <span>Java</span><span>Spring Boot</span><span>Go</span><span>Gin Framework</span><span>REST APIs</span><span>MySQL</span><span>JWT Authentication</span><span>Postman</span><span>Swagger</span><span>Docker</span>
+        </div>
+    </section>
+
+    <section class="section reveal-item stack-section">
+        <div class="section-heading">
+            <p class="section-label">Backend Stacks</p>
+            <h2>Two strong backend tracks: Java for enterprise structure, Go for fast services.</h2>
+        </div>
+
+        <div class="stack-grid">
+            <article class="stack-card java-stack tilt-card">
+                <div class="stack-top">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <div><span>Primary Stack</span><h3>Java + Spring Boot</h3></div>
+                </div>
+                <p>Best for structured REST APIs, authentication, layered architecture, MySQL operations, and scalable backend features.</p>
+                <ul>
+                    <li>Spring Boot REST controllers and services</li>
+                    <li>Authentication and protected workflows</li>
+                    <li>MySQL-backed application logic</li>
+                    <li>Swagger and Postman API testing</li>
+                </ul>
+            </article>
+
+            <article class="stack-card go-stack tilt-card">
+                <div class="stack-top">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go">
+                    <div><span>Second Stack</span><h3>Go + Gin Framework</h3></div>
+                </div>
+                <p>Best for lightweight APIs, fast request handling, clean routing, service logic, and simple deployable backend modules.</p>
+                <ul>
+                    <li>Gin routing and middleware structure</li>
+                    <li>REST API development in Go</li>
+                    <li>JSON request and response handling</li>
+                    <li>Clean service-oriented backend code</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="section reveal-item">
+        <div class="section-heading">
+            <p class="section-label">What I Bring</p>
+            <h2>A backend mindset shaped around dependable API and service delivery.</h2>
+        </div>
+
+        <div class="value-grid">
+            <article class="value-card tilt-card">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Dual Stack API Development</h3>
+                <p>Comfortable building REST APIs with Spring Boot and Gin, using clean routing and predictable backend contracts.</p>
+            </article>
+            <article class="value-card tilt-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Secure User Flows</h3>
+                <p>Authentication, guarded pages, form validation, and database-backed user journeys.</p>
+            </article>
+            <article class="value-card tilt-card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Practical Debugging</h3>
+                <p>Postman testing, Swagger documentation, deployment checks, and iterative fixes.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="skills" class="section reveal-item">
+        <div class="section-heading">
+            <p class="section-label">Technical Toolkit</p>
+            <h2>Skills organized around Java, Go, APIs, and delivery tools.</h2>
+        </div>
+
+        <div class="skill-clusters">
+            <article>
+                <h3>Core Backend</h3>
+                <div class="skills-grid compact-skills">
+                    <div class="tech-ball" data-name="Java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div>
+                    <div class="tech-ball" data-name="Spring Boot"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"></div>
+                    <div class="tech-ball" data-name="Go"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go"></div>
+                    <div class="tech-ball text-ball" data-name="Gin">Gin</div>
+                </div>
+            </article>
+            <article>
+                <h3>API & Tools</h3>
+                <div class="skills-grid compact-skills">
+                    <div class="tech-ball" data-name="Postman"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"></div>
+                    <div class="tech-ball" data-name="Swagger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg" alt="Swagger"></div>
+                    <div class="tech-ball" data-name="GraphQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL"></div>
+                    <div class="tech-ball" data-name="Docker"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></div>
+                </div>
+            </article>
+            <article>
+                <h3>Frontend Support</h3>
+                <div class="skills-grid compact-skills">
+                    <div class="tech-ball" data-name="HTML"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></div>
+                    <div class="tech-ball" data-name="CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></div>
+                    <div class="tech-ball" data-name="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+                    <div class="tech-ball" data-name="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="projects" class="section reveal-item">
+        <div class="section-heading">
+            <p class="section-label">Selected Work</p>
+            <h2>Projects with practical product thinking.</h2>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card tilt-card" data-title="Fitness Point" data-desc="Personalized fitness platform with BMI-based recommendations, diet planning, authentication, and premium features. Built to connect user inputs with useful workout and nutrition decisions." data-img="./images/fitnesspoint-hero.png" data-live="https://fitnesspoint.onrender.com/Fitnesspoint/" data-github="https://github.com/namanghanekar/fitnesspro" data-points="BMI-based recommendation logic|Authentication and premium feature flow|Live deployment with end-to-end user journey">
+                <img src="./images/fitnesspoint-hero.png" alt="Fitness Point preview">
+                <div class="project-body">
+                    <div class="tags"><span>Spring Boot</span><span>Auth</span><span>MySQL</span></div>
+                    <h3>Fitness Point</h3>
+                    <p>BMI-aware workout and diet platform with login, plans, and premium flow.</p>
+                    <div class="project-meta"><span>Health Tech</span><span>Live</span></div>
+                    <button class="text-link" type="button">Open case study <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </article>
+
+            <article class="project-card tilt-card" data-title="Sky Way" data-desc="Flight booking system with authentication, flight search, booking management, and structured user journeys. Designed around search, selection, and booking flow clarity." data-img="./images/img.png" data-live="" data-github="https://github.com/namanghanekar/skyway" data-points="Flight search and booking management|User authentication flow|Dashboard-style booking experience">
+                <img src="./images/img.png" alt="Sky Way preview">
+                <div class="project-body">
+                    <div class="tags"><span>Java</span><span>Booking</span><span>Dashboard</span></div>
+                    <h3>Sky Way</h3>
+                    <p>Flight search and booking management experience with secure user flows.</p>
+                    <div class="project-meta"><span>Travel</span><span>Repo</span></div>
+                    <button class="text-link" type="button">Open case study <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </article>
+
+            <article class="project-card tilt-card" data-title="Crypto Trading Platform" data-desc="Demo trading platform with virtual balance, buy and sell simulation, and a dashboard-style interface. Focused on transaction logic, state changes, and a clear financial UI." data-img="./images/img_1.png" data-live="" data-github="https://github.com/namanghanekar" data-points="Virtual balance and transaction simulation|Buy and sell workflow logic|Dashboard interface for quick portfolio scanning">
+                <img src="./images/img_1.png" alt="Crypto Trading Platform preview">
+                <div class="project-body">
+                    <div class="tags"><span>Simulation</span><span>UI</span><span>Logic</span></div>
+                    <h3>Crypto Trading Platform</h3>
+                    <p>Virtual trading dashboard for testing transaction logic and balances.</p>
+                    <div class="project-meta"><span>Fintech</span><span>Demo</span></div>
+                    <button class="text-link" type="button">Open case study <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section reveal-item">
+        <div class="experience-heading">
+            <p class="section-label">Experience</p>
+            <h2>Java Backend Developer Intern</h2>
+            <p class="muted">Kodvix Technologies | 3 months</p>
+        </div>
+
+        <div class="experience-board">
+            <div class="experience-card main-experience tilt-card">
+                <div class="experience-card-head">
+                    <div class="role-badge"><i class="fa-solid fa-briefcase"></i></div>
                     <div>
-                        <label>Email</label>
-                        <input type="email" placeholder="you@example.com">
+                        <span>Internship Role</span>
+                        <h3>Backend feature development with Spring Boot</h3>
                     </div>
                 </div>
-
-                <div>
-                    <label>Message</label>
-                    <textarea placeholder="Tell me about your idea or project..."></textarea>
+                <p>
+                    Built and improved backend workflows using Spring Boot, REST APIs, MySQL, and authentication logic.
+                    The internship helped me work with real feature requirements, debug request flows, and understand how
+                    backend code supports a complete product experience.
+                </p>
+                <div class="experience-points">
+                    <span><i class="fa-solid fa-code"></i> REST API implementation</span>
+                    <span><i class="fa-solid fa-database"></i> MySQL operations</span>
+                    <span><i class="fa-solid fa-lock"></i> Authentication flow</span>
+                    <span><i class="fa-solid fa-vial"></i> API testing mindset</span>
                 </div>
+            </div>
 
-                <button type="submit" class="send-btn">
-                    Send Message ✈
-                </button>
+            <div class="experience-side">
+                <article class="experience-mini tilt-card">
+                    <span>01</span>
+                    <h3>API Layer</h3>
+                    <p>Worked on request handling, endpoints, service logic, and response structure.</p>
+                </article>
+                <article class="experience-mini tilt-card">
+                    <span>02</span>
+                    <h3>Database Layer</h3>
+                    <p>Handled MySQL-backed operations and connected data flow to backend features.</p>
+                </article>
+                <article class="experience-mini tilt-card">
+                    <span>03</span>
+                    <h3>Production Mindset</h3>
+                    <p>Improved debugging, documentation habits, and deployment-aware thinking.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal-item">
+        <div class="section-heading">
+            <p class="section-label">Build Process</p>
+            <h2>How I move an idea into a working Java or Go backend feature.</h2>
+        </div>
+
+        <div class="process-grid">
+            <article><span>01</span><h3>Understand Flow</h3><p>Map the user action, required data, request shape, and expected system response.</p></article>
+            <article><span>02</span><h3>Choose Stack</h3><p>Use Spring Boot for structured application flow or Gin when a lighter Go service is the better fit.</p></article>
+            <article><span>03</span><h3>Test Contract</h3><p>Use Postman and Swagger-style documentation to make behavior clear and repeatable.</p></article>
+            <article><span>04</span><h3>Polish Delivery</h3><p>Connect UI, handle errors, check deployment behavior, and refine the final experience.</p></article>
+        </div>
+    </section>
+
+    <section id="about" class="section reveal-item">
+        <div class="about-grid">
+            <div>
+                <p class="section-label">About</p>
+                <h2>Developer with ownership mindset.</h2>
+            </div>
+            <div class="about-copy">
+                <p>
+                    I enjoy turning requirements into working backend systems using Java/Spring Boot and Go/Gin:
+                    API design, authentication, database logic, documentation, and simple interfaces that make the backend useful.
+                </p>
+                <p>
+                    I am currently deepening system design fundamentals, Docker-based deployment, Go service patterns,
+                    and cleaner API documentation with Swagger and Postman.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section reveal-item">
+        <div class="academic-header">
+            <div class="section-heading">
+                <p class="section-label">Academics</p>
+                <h2>Computer Science foundation with backend-focused learning.</h2>
+            </div>
+            <div class="academic-score">
+                <span>Current Program</span>
+                <strong>B.Tech CSE</strong>
+                <p>2022 - 2026</p>
+            </div>
+        </div>
+
+        <div class="academic-board">
+            <article class="academic-feature tilt-card">
+                <div class="academic-logo">
+                    <img src="./images/img_2.png" alt="SVVV logo">
+                </div>
+                <div>
+                    <span class="academic-year">2022 - 2026</span>
+                    <h3>B.Tech - Computer Science Engineering</h3>
+                    <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore</p>
+                    <div class="academic-tags">
+                        <span>Backend Development</span>
+                        <span>DSA Fundamentals</span>
+                        <span>System Design Basics</span>
+                    </div>
+                </div>
+            </article>
+
+            <div class="academic-side">
+                <article class="academic-mini tilt-card">
+                    <img src="./images/img_3.png" alt="School logo">
+                    <div>
+                        <span>2021 - 2022</span>
+                        <h3>Higher Secondary (12th)</h3>
+                        <p>Bharat Bharti Hig. Sec. School, Betul</p>
+                    </div>
+                    <strong>70%</strong>
+                </article>
+                <article class="academic-mini tilt-card">
+                    <img src="./images/img_3.png" alt="School logo">
+                    <div>
+                        <span>2019 - 2020</span>
+                        <h3>Secondary (10th)</h3>
+                        <p>Bharat Bharti Hig. Sec. School, Betul</p>
+                    </div>
+                    <strong>78%</strong>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section reveal-item">
+        <div class="cert-header">
+            <div class="section-heading">
+                <p class="section-label">Certifications</p>
+                <h2>Verified learning across Java backend, cloud, AI, and fundamentals.</h2>
+            </div>
+            <div class="cert-summary">
+                <div><strong>6</strong><span>Certificates</span></div>
+                <div><strong>3</strong><span>Java Tracks</span></div>
+                <div><strong>1</strong><span>Cloud Credential</span></div>
+            </div>
+        </div>
+
+        <div class="cert-grid">
+            <button class="cert-card cert-featured tilt-card" data-cert="./resume/cer1.jpeg" data-title="Advanced Java Backend" data-org="Universal Informatics" data-year="2024">
+                <span class="cert-icon"><i class="fa-solid fa-server"></i></span>
+                <small>Featured Backend Credential</small>
+                <h3>Advanced Java Backend</h3>
+                <p>Advanced backend training focused on Java server-side development and backend application structure.</p>
+                <div class="cert-foot"><span>Universal Informatics</span><strong>2024</strong></div>
+            </button>
+            <button class="cert-card tilt-card" data-cert="./resume/cer3.jpeg" data-title="Internship / Training" data-org="Universal Informatics" data-year="2025">
+                <span class="cert-icon"><i class="fa-solid fa-laptop-code"></i></span>
+                <small>Professional Training</small>
+                <h3>Internship / Training</h3>
+                <p>Three months of practical training in C, C++, DSA, and Java fundamentals.</p>
+                <div class="cert-foot"><span>Universal Informatics</span><strong>2025</strong></div>
+            </button>
+            <button class="cert-card tilt-card" data-cert="./resume/cer2.jpeg" data-title="Core Java" data-org="Universal Informatics" data-year="2024">
+                <span class="cert-icon"><i class="fa-brands fa-java"></i></span>
+                <small>Java Foundation</small>
+                <h3>Core Java</h3>
+                <p>Core Java training covering object-oriented programming and language fundamentals.</p>
+                <div class="cert-foot"><span>Universal Informatics</span><strong>2024</strong></div>
+            </button>
+            <button class="cert-card tilt-card" data-cert="./resume/cer4.jpeg" data-title="AI Chatbot Development" data-org="NxT Wave TM" data-year="2024">
+                <span class="cert-icon"><i class="fa-solid fa-robot"></i></span>
+                <small>AI Project</small>
+                <h3>AI Chatbot Development</h3>
+                <p>Built a generative AI chatbot project and explored AI-assisted application behavior.</p>
+                <div class="cert-foot"><span>NxT Wave TM</span><strong>2024</strong></div>
+            </button>
+            <button class="cert-card tilt-card" data-cert="./resume/cer5.jpeg" data-title="Java Basic" data-org="HackerRank" data-year="2025">
+                <span class="cert-icon"><i class="fa-solid fa-code"></i></span>
+                <small>Coding Assessment</small>
+                <h3>Java Basic</h3>
+                <p>HackerRank Java Basic certification validating programming fundamentals.</p>
+                <div class="cert-foot"><span>HackerRank</span><strong>2025</strong></div>
+            </button>
+            <button class="cert-card tilt-card" data-cert="./resume/cer6.png" data-title="Cloud Computing" data-org="NPTEL Swayam Portal" data-year="2025">
+                <span class="cert-icon"><i class="fa-solid fa-cloud"></i></span>
+                <small>Cloud Credential</small>
+                <h3>Cloud Computing</h3>
+                <p>NPTEL Cloud Computing certification with silver-rank performance.</p>
+                <div class="cert-foot"><span>NPTEL Swayam Portal</span><strong>2025</strong></div>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section reveal-item">
+        <div class="contact-wrapper">
+            <div>
+                <p class="section-label">Contact</p>
+                <h2>Let us build something useful.</h2>
+                <p class="muted">Open to internships, backend roles, Java/Spring Boot work, Go/Gin APIs, collaborations, and product ideas.</p>
+
+                <div class="contact-list">
+                    <a href="mailto:namanghanekar@gmail.com"><i class="fa-solid fa-envelope"></i><span>namanghanekar@gmail.com</span></a>
+                    <a href="https://www.linkedin.com/in/naman-ghanekar-78b6932a2/" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span>naman-ghanekar</span></a>
+                    <a href="https://github.com/namanghanekar" target="_blank"><i class="fa-brands fa-github"></i><span>namanghanekar</span></a>
+                </div>
+            </div>
+
+            <form class="contact-form" action="mailto:namanghanekar@gmail.com" method="post" enctype="text/plain">
+                <label>Name<input name="name" type="text" placeholder="Your name"></label>
+                <label>Email<input name="email" type="email" placeholder="you@example.com"></label>
+                <label>Message<textarea name="message" placeholder="Tell me about the opportunity or project..."></textarea></label>
+                <button class="send-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
             </form>
         </div>
-
-    </div>
-</section>
-
-
-</section>
-<!-- PERSONAL NOTE SECTION -->
-<section class="personal-note">
-    <span class="note-label">BEYOND THE IDE</span>
-
-    <p class="note-text">
-        “Outside of software, I enjoy playing cricket and football.
-        These interests keep me grounded and creative — a balance that
-        quietly reflects in every product I build.”
-    </p>
-</section>
-
-<!-- PROJECT MODAL -->
-<div id="projectModal" class="modal">
-    <div class="modal-content">
-
-        <span class="close-btn" onclick="closeModal()">×</span>
-
-        <div class="modal-image">
-            <img id="modalImg" alt="Project Preview">
-        </div>
-
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
-
-        <div class="modal-links">
-            <a id="modalLive" target="_blank">Live</a>
-            <a id="modalGithub" target="_blank">GitHub</a>
-        </div>
-
-    </div>
-</div>
-
+    </section>
+</main>
 
 <footer class="site-footer">
-
-    <div class="footer-left">
-        <span class="status-dot"></span>
-        <span class="status-text">AVAILABLE FOR OPPORTUNITIES</span>
-        <p class="copyright">
-            © 2026 <span class="highlight-name">Naman Ghanekar</span>
-        </p>
+    <div>
+        <span class="status"><i></i> Available for opportunities</span>
+        <p>Copyright 2026 <strong>Naman Ghanekar</strong></p>
     </div>
-
-    <div class="footer-center">
-        <a href="https://github.com/namanghanekar" target="_blank" class="footer-icon">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/naman-ghanekar-78b6932a2/"
-           target="_blank" class="footer-icon">
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:namanghanekar@gmail.com" class="footer-icon">
-            <i class="fa-regular fa-envelope"></i>
-        </a>
+    <div class="footer-links">
+        <a href="https://github.com/namanghanekar" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/naman-ghanekar-78b6932a2/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:namanghanekar@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
     </div>
-
-    <div class="footer-right">
-        <span>BACK TO TOP</span>
-        <button id="backToTop" class="top-btn">↑</button>
-    </div>
-
+    <button id="backToTop" class="top-btn" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 </footer>
 
-
-<!-- CERTIFICATE MODAL -->
-<div id="certModal" class="cert-modal">
-    <span class="cert-close" onclick="closeCertModal()">×</span>
-    <img id="certImg" class="cert-modal-img">
+<div id="projectModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close-btn" type="button" data-close-modal aria-label="Close project modal"><i class="fa-solid fa-xmark"></i></button>
+        <img id="modalImg" alt="Project preview">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div class="modal-links">
+            <a id="modalLive" target="_blank">Live Project</a>
+            <a id="modalGithub" target="_blank">GitHub Repo</a>
+        </div>
+        <ul id="modalPoints" class="modal-points"></ul>
+    </div>
 </div>
+
+<div id="certModal" class="modal cert-modal" aria-hidden="true">
+    <div class="cert-viewer" role="dialog" aria-modal="true" aria-label="Certificate preview">
+        <button class="close-btn" type="button" data-close-cert aria-label="Close certificate modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="cert-modal-meta">
+            <span id="certModalYear"></span>
+            <h2 id="certModalTitle"></h2>
+            <p id="certModalOrg"></p>
+        </div>
+        <img id="certImg" alt="Certificate preview">
+    </div>
+</div>
+
 <script src="./js/script.js"></script>
 </body>
 </html>
